@@ -29,3 +29,9 @@ def create_user(data: dict):
 
     # Retornamos solo los datos públicos
     return {"id": user["id"], "email": user["email"]}
+
+@router.get("/")
+def list_users():
+    return [
+        {"id": 1, "name": "Fer"},
+    ]
